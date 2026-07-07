@@ -190,6 +190,50 @@ def exercicio_20_senha_while():
     print("Acesso liberado")
 
 
+def exercicio_21_menu_simples():
+    i = -1
+    while i != 0:
+        print("1 - Mostrar mensagem de boas-vindas")
+        print("2 - Mostrar introdução ao Python")
+        print("0 - Sair")
+        opcao: int = int(input("Escolha uma opção: "))
+        i = opcao
+        while i == 1:
+            os.system("cls")
+            print("Bem-vindo(a)!")
+            opcao_sair: str = str(input("Deseja sair? ")).lower()
+            if opcao_sair == "sim":
+                i = -1
+            os.system("cls")
+        while i == 2:
+            os.system("cls")
+            print("Esta é uma introdução ao Python")
+            opcao_sair: str = str(input("Deseja sair? ")).lower()
+            if opcao_sair == "sim":
+                i = -1
+            os.system("cls")
+        if i != 1 or 2:
+            os.system("cls")
+            print("Inválido")
+    os.system("cls")
+
+
+def exercicio_22_tabuada_while():
+    i = 0
+    while i >= 0:
+        print("Tabuada")
+        numero1: int = int(input("Digite um número para ver a tabuada até 10 (Digite um número negativo para sair): "))
+        os.system("cls")
+        while i <= 10:
+            if i != 0:
+                print(numero1, "*", i, "=", numero1 * i)
+            i += 1
+        i = 0
+
+
+
+
+
 def exercicio_triangulo():
     lado1: int = int(input("Escreva a medida do lado 1: "))
     lado2: int = int(input("Escreva a medida do lado 2: "))
@@ -204,4 +248,4 @@ def exercicio_triangulo():
         print("Erro. Não é possível ser um triângulo")
 
 
-exercicio_triangulo()
+exercicio_22_tabuada_while()
