@@ -1,9 +1,6 @@
 from typing import Dict, List, Tuple
 
 
-def exe
-
-
 def obter_clientes_com_score_alto(clientes: Dict[str, Dict[str, float]]):
     clientes_selecionados: List[str] = []
     for nome_cliente, dados_cliente in clientes.items():
