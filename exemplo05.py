@@ -48,6 +48,9 @@ def processar_disponibilidade_emprestimo():
             "score": 850
         }
     }
+    clientes_aprovados_para_emprestimo = obter_clientes_com_score_alto(clientes)
+    total_salarios = somar_salarios(clientes)
+    nome_clientes = obter_nome_clientes(clientes)
 
 
 def percorrer_lista_vs_vetor_tupla():
