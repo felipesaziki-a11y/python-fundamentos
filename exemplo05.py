@@ -6,11 +6,27 @@ def obter_clientes_com_score_alto(clientes: Dict[str, Dict[str, float]]):
     for nome_cliente, dados_cliente in clientes.items():
         score = dados_cliente["score"]
         if score > 650:
+            clientes_selecionados.append(nome_cliente)
+    return clientes_selecionados
 
 
+def somar_salarios(clientes: Dict[str, Dict[str, float]]) -> float:
+    total = 0
+    for dados in clientes.values():
+        salario = dados["salario"]
+        total = total + salario
+    return total
 
-def processar_disponibilidade():
-    clientes = {
+
+def obter_nome_clientes(clientes: Dict[str, Dict[str, float]]) -> List[str]:
+    nomes = []
+    for nome_cliente in clientes.keys():
+        nomes.append(nome_cliente)
+    return nomes
+
+
+def processar_disponibilidade_emprestimo():
+    clientes: Dict[str, Dict[str, float]] = {
         "Bianca": {
             "salário": 2300,
             "id": 99,
