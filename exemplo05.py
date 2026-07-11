@@ -9,7 +9,6 @@ def obter_clientes_com_score_alto(clientes: Dict[str, Dict[str, float]]):
     for nome_cliente, dados_cliente in clientes.items():
         score = dados_cliente["score"]
         if score > 650:
-    pass
 
 
 
