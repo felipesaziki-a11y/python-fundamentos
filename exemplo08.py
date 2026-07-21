@@ -12,14 +12,13 @@ class Funcionario(Pessoa):
         # super() permite ter acesso a propriedades e funções da classe pai
         super().__init__(nome, sobrenome)
         self.cargo = cargo
-
-    def apresentar_dados(self):
-        print(f"""Nome: """)
     
     
 def exemplo_funcionario():
     pessoa = Pessoa("Celsio", "Ramos")
-    pessoa.gerar_nome_completo()
+    print("Nome completo:", pessoa.gerar_nome_completo())
+    funcionario = Funcionario("Faro", "Faro", "A")
+    print("Nome completo e cargo:", funcionario.gerar_nome_completo())
 
 
 exemplo_funcionario()
