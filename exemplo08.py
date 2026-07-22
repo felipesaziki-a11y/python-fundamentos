@@ -70,6 +70,14 @@ Média: {media}
 """)
     
 
+def pessoas():
+    pessoas = [
+        Pessoa("Fernando", "99 47 9929-8374", "fernando_legau@gmail.com")
+    ]
+    for pessoa in pessoas:
+        pessoa.apresentar_dados()
+
+
 def alunos():
     alunos = [
         Aluno("Fernando", "99 47 9929-8374", "fernando_legau@gmail.com", 9.9, 7.5, 7.8)
@@ -85,6 +93,6 @@ def professores():
     for professor in professores:
         professor.apresentar_dados()
 
-professores()
 
+professores()
 alunos()
