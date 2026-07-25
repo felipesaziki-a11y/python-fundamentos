@@ -74,4 +74,12 @@ def dialogo():
     print(f"""{guerreiro.nome} {guerreiro.ataque}/{guerreiro.defesa}: {guerreiro.falar()}""")
     print(f"""{mago.nome} {mago.ataque}/{mago.defesa}: {mago.falar()}""")
 
-dialogo()
+
+def juntar_texto(
+        razao_social: str,
+        cnpj: str,
+) -> str:
+    print(".......")
+
+
+juntar_texto(razao_social="Escola gastronômica", cnpj="12.44.5545.3245/2413")
