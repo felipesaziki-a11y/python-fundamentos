@@ -23,7 +23,29 @@ def exemplo_com_tratamento_conversao():
     print(".")
 
 
+def exemplo_com_multiplos_tratamentos():
+    numero1_digitado = "cinquenta"
+    numero2_digitado = "vinte"
+    try:
+        resultado: int = int(numero1_digitado) / int(numero2_digitado)
+        print(resultado)
+    except ZeroDivisionError:
+        print("Não é possível dividir por zero")
+    except ValueError:
+        print("Número digitado é inválido")
+
+    print(".")
+
+
+def exemplo_mensagem_erro():
+    try:
+        aluno = {"nome": "Pedro", "nota1": 7.7}
+        media_aluno = aluno["media"]
+        print(media_aluno)
+    except KeyError as erro:
+        print("Mensagem de erro tentar acessar a chave:", erro)
+
 
 # Ponto de entrada da aplicação, deve ter um único da aplicação inteira
 if __name__ == "__main__":
-    exemplo_com_tratamento_conversao()
+    exemplo_mensagem_erro()
